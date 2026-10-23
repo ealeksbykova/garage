@@ -1,0 +1,20 @@
+$kind: http-request
+name: Get Wheel by ID
+method: GET
+url: '{{baseUrl}}/api/wheels/:id'
+order: 3000
+pathVariables:
+  - key: id
+    value: '{{wheelId}}'
+    description: UUID of the wheel
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200 OK", function () {
+          pm.response.to.have.status(200);
+      });
+      pm.test("Response has id", function () {
+          const json = pm.response.json();
+          pm.expect(json).to.have.property("id");
+      });

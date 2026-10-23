@@ -1,0 +1,24 @@
+$kind: http-request
+name: Get Vehicle by ID
+method: GET
+url: '{{baseUrl}}/api/vehicles/:id'
+order: 3000
+pathVariables:
+  - key: id
+    value: '{{vehicleId}}'
+    description: UUID of the vehicle
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200 OK", function () {
+          pm.response.to.have.status(200);
+      });
+      pm.test("Response has id", function () {
+          const json = pm.response.json();
+          pm.expect(json).to.have.property("id");
+      });
+      pm.test("Response includes nested engine", function () {
+          const json = pm.response.json();
+          pm.expect(json).to.have.property("engine");
+      });

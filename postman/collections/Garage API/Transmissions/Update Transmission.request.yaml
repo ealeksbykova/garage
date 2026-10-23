@@ -1,0 +1,31 @@
+$kind: http-request
+name: Update Transmission
+method: PUT
+url: '{{baseUrl}}/api/transmissions/:id'
+order: 4000
+pathVariables:
+  - key: id
+    value: '{{transmissionId}}'
+    description: UUID of the transmission to update
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "transmissionType": "MANUAL",
+      "gearsCount": 6,
+      "serialNumber": "TRN-001-2024-UPD"
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200 OK", function () {
+          pm.response.to.have.status(200);
+      });
+      pm.test("transmissionType updated", function () {
+          const json = pm.response.json();
+          pm.expect(json.transmissionType).to.eql("MANUAL");
+      });

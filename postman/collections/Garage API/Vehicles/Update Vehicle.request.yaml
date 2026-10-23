@@ -1,0 +1,42 @@
+$kind: http-request
+name: Update Vehicle
+method: PUT
+url: '{{baseUrl}}/api/vehicles/:id'
+order: 4000
+pathVariables:
+  - key: id
+    value: '{{vehicleId}}'
+    description: UUID of the vehicle to update
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "vin": "1HGBH41JXMN109186",
+      "brand": "Toyota",
+      "model": "Camry",
+      "productionYear": 2022,
+      "color": "Black",
+      "mileageKm": 20000,
+      "engineId": "{{engineId}}",
+      "transmissionId": "{{transmissionId}}",
+      "onBoardComputerId": "{{onBoardComputerId}}",
+      "wheelIds": ["{{wheelId}}"]
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200 OK", function () {
+          pm.response.to.have.status(200);
+      });
+      pm.test("color updated", function () {
+          const json = pm.response.json();
+          pm.expect(json.color).to.eql("Black");
+      });
+      pm.test("mileageKm updated", function () {
+          const json = pm.response.json();
+          pm.expect(json.mileageKm).to.eql(20000);
+      });

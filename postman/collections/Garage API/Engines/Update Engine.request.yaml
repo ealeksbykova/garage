@@ -1,0 +1,33 @@
+$kind: http-request
+name: Update Engine
+method: PUT
+url: '{{baseUrl}}/api/engines/:id'
+order: 4000
+pathVariables:
+  - key: id
+    value: '{{engineId}}'
+    description: UUID of the engine to update
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "engineType": "V8",
+      "volumeLiters": 5.0,
+      "horsepower": 420,
+      "torqueNm": 550,
+      "serialNumber": "ENG-001-2024-UPD"
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200 OK", function () {
+          pm.response.to.have.status(200);
+      });
+      pm.test("engineType updated", function () {
+          const json = pm.response.json();
+          pm.expect(json.engineType).to.eql("V8");
+      });

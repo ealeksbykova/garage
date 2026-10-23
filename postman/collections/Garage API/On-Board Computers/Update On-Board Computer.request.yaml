@@ -1,0 +1,31 @@
+$kind: http-request
+name: Update On-Board Computer
+method: PUT
+url: '{{baseUrl}}/api/on-board-computers/:id'
+order: 4000
+pathVariables:
+  - key: id
+    value: '{{onBoardComputerId}}'
+    description: UUID of the on-board computer to update
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "firmwareVersion": "3.0.0",
+      "cpuModel": "ARM Cortex-A72",
+      "ramMb": 1024
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200 OK", function () {
+          pm.response.to.have.status(200);
+      });
+      pm.test("firmwareVersion updated", function () {
+          const json = pm.response.json();
+          pm.expect(json.firmwareVersion).to.eql("3.0.0");
+      });

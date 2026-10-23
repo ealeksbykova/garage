@@ -1,0 +1,33 @@
+$kind: http-request
+name: Update Wheel
+method: PUT
+url: '{{baseUrl}}/api/wheels/:id'
+order: 4000
+pathVariables:
+  - key: id
+    value: '{{wheelId}}'
+    description: UUID of the wheel to update
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "position": "REAR_RIGHT",
+      "radiusInch": 18.0,
+      "tireBrand": "Bridgestone",
+      "tireModel": "Potenza S001",
+      "serialNumber": "WHL-001-2024-UPD"
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200 OK", function () {
+          pm.response.to.have.status(200);
+      });
+      pm.test("position updated", function () {
+          const json = pm.response.json();
+          pm.expect(json.position).to.eql("REAR_RIGHT");
+      });

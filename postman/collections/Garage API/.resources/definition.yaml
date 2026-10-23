@@ -1,0 +1,8 @@
+$kind: collection
+description: |-
+  REST API for the Garage application.
+  Manages Vehicles and their components: Engines, Transmissions, Wheels, and On-Board Computers.
+  Base URL: http://localhost:8080
+variables:
+  baseUrl: http://localhost:8080
+  engineId: ""

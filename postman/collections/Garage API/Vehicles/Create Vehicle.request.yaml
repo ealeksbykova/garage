@@ -1,0 +1,43 @@
+$kind: http-request
+name: Create Vehicle
+method: POST
+url: '{{baseUrl}}/api/vehicles'
+order: 1000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "vin": "1HGBH41JXMN109186",
+      "brand": "Toyota",
+      "model": "Camry",
+      "productionYear": 2022,
+      "color": "Silver",
+      "mileageKm": 15000,
+      "engineId": "{{engineId}}",
+      "transmissionId": "{{transmissionId}}",
+      "onBoardComputerId": "{{onBoardComputerId}}",
+      "wheelIds": ["{{wheelId}}"]
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 201 Created", function () {
+          pm.response.to.have.status(201);
+      });
+      pm.test("Response has id", function () {
+          const json = pm.response.json();
+          pm.expect(json).to.have.property("id");
+          pm.collectionVariables.set("vehicleId", json.id);
+      });
+      pm.test("VIN matches request", function () {
+          const json = pm.response.json();
+          pm.expect(json.vin).to.eql("1HGBH41JXMN109186");
+      });
+      pm.test("Response has createdAt", function () {
+          const json = pm.response.json();
+          pm.expect(json).to.have.property("createdAt");
+      });

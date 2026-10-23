@@ -1,0 +1,20 @@
+$kind: http-request
+name: Get On-Board Computer by ID
+method: GET
+url: '{{baseUrl}}/api/on-board-computers/:id'
+order: 3000
+pathVariables:
+  - key: id
+    value: '{{onBoardComputerId}}'
+    description: UUID of the on-board computer
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 200 OK", function () {
+          pm.response.to.have.status(200);
+      });
+      pm.test("Response has id", function () {
+          const json = pm.response.json();
+          pm.expect(json).to.have.property("id");
+      });

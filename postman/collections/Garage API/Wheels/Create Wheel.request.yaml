@@ -1,0 +1,34 @@
+$kind: http-request
+name: Create Wheel
+method: POST
+url: '{{baseUrl}}/api/wheels'
+order: 1000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "position": "FRONT_LEFT",
+      "radiusInch": 17.0,
+      "tireBrand": "Michelin",
+      "tireModel": "Pilot Sport 4",
+      "serialNumber": "WHL-001-2024"
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 201 Created", function () {
+          pm.response.to.have.status(201);
+      });
+      pm.test("Response has id", function () {
+          const json = pm.response.json();
+          pm.expect(json).to.have.property("id");
+          pm.collectionVariables.set("wheelId", json.id);
+      });
+      pm.test("position matches request", function () {
+          const json = pm.response.json();
+          pm.expect(json.position).to.eql("FRONT_LEFT");
+      });

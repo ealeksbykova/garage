@@ -1,0 +1,16 @@
+$kind: http-request
+name: Delete On-Board Computer
+method: DELETE
+url: '{{baseUrl}}/api/on-board-computers/:id'
+order: 5000
+pathVariables:
+  - key: id
+    value: '{{onBoardComputerId}}'
+    description: UUID of the on-board computer to delete
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 204 No Content", function () {
+          pm.response.to.have.status(204);
+      });

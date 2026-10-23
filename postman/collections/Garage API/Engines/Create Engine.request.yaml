@@ -1,0 +1,34 @@
+$kind: http-request
+name: Create Engine
+method: POST
+url: '{{baseUrl}}/api/engines'
+order: 1000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "engineType": "V6",
+      "volumeLiters": 3.5,
+      "horsepower": 280,
+      "torqueNm": 350,
+      "serialNumber": "ENG-001-2024"
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status is 201 Created", function () {
+          pm.response.to.have.status(201);
+      });
+      pm.test("Response has id", function () {
+          const json = pm.response.json();
+          pm.expect(json).to.have.property("id");
+          pm.collectionVariables.set("engineId", json.id);
+      });
+      pm.test("engineType matches request", function () {
+          const json = pm.response.json();
+          pm.expect(json.engineType).to.eql("V6");
+      });
