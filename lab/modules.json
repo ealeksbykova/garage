@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "title": "Двигатели на уровне сервиса",
+    "kind": "Юнит",
+    "file": "EngineServiceTest.java",
+    "scope": "Сервис и настоящий MapStruct mapper; репозитории Mockito без БД."
+  },
+  {
+    "id": 2,
+    "title": "Коробки передач на уровне сервиса",
+    "kind": "Юнит",
+    "file": "TransmissionServiceTest.java",
+    "scope": "Сервис и настоящий MapStruct mapper; репозитории Mockito без БД."
+  },
+  {
+    "id": 3,
+    "title": "Бортовые компьютеры на уровне сервиса",
+    "kind": "Юнит",
+    "file": "OnBoardComputerServiceTest.java",
+    "scope": "Сервис и настоящий MapStruct mapper; репозитории Mockito без БД."
+  },
+  {
+    "id": 4,
+    "title": "Колёса на уровне сервиса",
+    "kind": "Юнит",
+    "file": "WheelServiceTest.java",
+    "scope": "Сервис и настоящий MapStruct mapper; репозитории Mockito без БД."
+  },
+  {
+    "id": 5,
+    "title": "Автомобили на уровне сервиса",
+    "kind": "Юнит",
+    "file": "VehicleServiceTest.java",
+    "scope": "Сервис и настоящий MapStruct mapper; репозитории Mockito без БД."
+  },
+  {
+    "id": 6,
+    "title": "Двигатели через HTTP API",
+    "kind": "Функциональное",
+    "file": "EngineApiTest.java",
+    "scope": "Настоящий HTTP, встроенный Tomcat, Spring, Hibernate, PostgreSQL и Liquibase."
+  },
+  {
+    "id": 7,
+    "title": "Коробки передач через HTTP API",
+    "kind": "Функциональное",
+    "file": "TransmissionApiTest.java",
+    "scope": "Настоящий HTTP, встроенный Tomcat, Spring, Hibernate, PostgreSQL и Liquibase."
+  },
+  {
+    "id": 8,
+    "title": "Бортовые компьютеры через HTTP API",
+    "kind": "Функциональное",
+    "file": "OnBoardComputerApiTest.java",
+    "scope": "Настоящий HTTP, встроенный Tomcat, Spring, Hibernate, PostgreSQL и Liquibase."
+  },
+  {
+    "id": 9,
+    "title": "Колёса через HTTP API",
+    "kind": "Функциональное",
+    "file": "WheelApiTest.java",
+    "scope": "Настоящий HTTP, встроенный Tomcat, Spring, Hibernate, PostgreSQL и Liquibase."
+  },
+  {
+    "id": 10,
+    "title": "Автомобили через HTTP API",
+    "kind": "Функциональное",
+    "file": "VehicleApiTest.java",
+    "scope": "Настоящий HTTP, встроенный Tomcat, Spring, Hibernate, PostgreSQL и Liquibase."
+  },
+  {
+    "id": 11,
+    "title": "Валидация и ошибки API",
+    "kind": "Функциональное негативное",
+    "file": "ValidationApiTest.java",
+    "scope": "Входные ограничения, HTTP-коды и уникальность. Учебные правила явно закреплены в API_REQUIREMENTS.md."
+  },
+  {
+    "id": 12,
+    "title": "Связи автомобиля и транзакции",
+    "kind": "Интеграционное",
+    "file": "RelationsApiTest.java",
+    "scope": "Связи 1:1 и 1:N, внешние ключи, атомарность изменения."
+  },
+  {
+    "id": 13,
+    "title": "Хранилище и миграции",
+    "kind": "Интеграционное",
+    "file": "PersistenceTest.java",
+    "scope": "Отдельный контейнер PostgreSQL через Testcontainers; создание схемы, seed, identity, foreign key, commit и повторный запуск миграций."
+  },
+  {
+    "id": 14,
+    "title": "Бенчмарки HTTP API",
+    "kind": "Бенчмарк",
+    "file": "lab/performance.py --mode benchmark",
+    "scope": "Один HTTP-клиент, 100 прогревочных чтений, три повтора по 300 запросов для каждого сценария."
+  },
+  {
+    "id": 15,
+    "title": "Стресс и восстановление",
+    "kind": "Стресс",
+    "file": "lab/performance.py --mode stress",
+    "scope": "Замкнутая модель нагрузки на loopback. Ступени 1, 8, 32, 64, 128 клиентов; смешанная и пишущая нагрузка; проверка восстановления и целостности."
+  }
+]

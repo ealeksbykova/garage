@@ -1,0 +1,19 @@
+name: garage-lab
+services:
+  postgres:
+    image: postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3
+    environment:
+      POSTGRES_DB: garage
+      POSTGRES_USER: garage
+      POSTGRES_PASSWORD: garage_lab_local
+    ports:
+      - "127.0.0.1:54329:5432"
+    volumes:
+      - garage_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U garage -d garage"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+volumes:
+  garage_pg:

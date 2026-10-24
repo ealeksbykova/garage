@@ -3,3 +3,5 @@ databaseChangeLog:
       file: db/changelog/changeset/V1__init_database.sql
   - include:
       file: db/changelog/changeset/V2__insert_data.sql
+  - include:
+      file: db/changelog/postgresql/V3__identity_sequences.sql

@@ -1,0 +1,812 @@
+[
+  {
+    "id": "M01-01",
+    "module": 1,
+    "title": "Создание и маппинг ответа",
+    "steps": "Настроить save на присвоение ID 77; вызвать create с валидным DTO.",
+    "expected": "ID 77, все поля DTO сохранены; repository.save вызван один раз.",
+    "method": "create",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M01-02",
+    "module": 1,
+    "title": "Поиск отсутствующего ID",
+    "steps": "Вернуть Optional.empty для ID 999; вызвать findById.",
+    "expected": "EntityNotFoundException; сохранение не вызывается.",
+    "method": "missing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M01-03",
+    "module": 1,
+    "title": "Обновление существующего объекта",
+    "steps": "Вернуть объект ID 77; вызвать update с новыми данными.",
+    "expected": "ID сохранён, изменяемое поле обновлено, повторный save не вызывается.",
+    "method": "update",
+    "priority": "Средний"
+  },
+  {
+    "id": "M01-04",
+    "module": 1,
+    "title": "Удаление отсутствующего объекта",
+    "steps": "existsById(999) = false; вызвать delete.",
+    "expected": "EntityNotFoundException; deleteById не вызывается.",
+    "method": "deleteMissing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M02-01",
+    "module": 2,
+    "title": "Создание и маппинг ответа",
+    "steps": "Настроить save на присвоение ID 77; вызвать create с валидным DTO.",
+    "expected": "ID 77, все поля DTO сохранены; repository.save вызван один раз.",
+    "method": "create",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M02-02",
+    "module": 2,
+    "title": "Поиск отсутствующего ID",
+    "steps": "Вернуть Optional.empty для ID 999; вызвать findById.",
+    "expected": "EntityNotFoundException; сохранение не вызывается.",
+    "method": "missing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M02-03",
+    "module": 2,
+    "title": "Обновление существующего объекта",
+    "steps": "Вернуть объект ID 77; вызвать update с новыми данными.",
+    "expected": "ID сохранён, изменяемое поле обновлено, повторный save не вызывается.",
+    "method": "update",
+    "priority": "Средний"
+  },
+  {
+    "id": "M02-04",
+    "module": 2,
+    "title": "Удаление отсутствующего объекта",
+    "steps": "existsById(999) = false; вызвать delete.",
+    "expected": "EntityNotFoundException; deleteById не вызывается.",
+    "method": "deleteMissing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M03-01",
+    "module": 3,
+    "title": "Создание и маппинг ответа",
+    "steps": "Настроить save на присвоение ID 77; вызвать create с валидным DTO.",
+    "expected": "ID 77, все поля DTO сохранены; repository.save вызван один раз.",
+    "method": "create",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M03-02",
+    "module": 3,
+    "title": "Поиск отсутствующего ID",
+    "steps": "Вернуть Optional.empty для ID 999; вызвать findById.",
+    "expected": "EntityNotFoundException; сохранение не вызывается.",
+    "method": "missing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M03-03",
+    "module": 3,
+    "title": "Обновление существующего объекта",
+    "steps": "Вернуть объект ID 77; вызвать update с новыми данными.",
+    "expected": "ID сохранён, изменяемое поле обновлено, повторный save не вызывается.",
+    "method": "update",
+    "priority": "Средний"
+  },
+  {
+    "id": "M03-04",
+    "module": 3,
+    "title": "Удаление отсутствующего объекта",
+    "steps": "existsById(999) = false; вызвать delete.",
+    "expected": "EntityNotFoundException; deleteById не вызывается.",
+    "method": "deleteMissing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M04-01",
+    "module": 4,
+    "title": "Создание и маппинг ответа",
+    "steps": "Настроить save на присвоение ID 77; вызвать create с валидным DTO.",
+    "expected": "ID 77, все поля DTO сохранены; repository.save вызван один раз.",
+    "method": "create",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M04-02",
+    "module": 4,
+    "title": "Поиск отсутствующего ID",
+    "steps": "Вернуть Optional.empty для ID 999; вызвать findById.",
+    "expected": "EntityNotFoundException; сохранение не вызывается.",
+    "method": "missing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M04-03",
+    "module": 4,
+    "title": "Обновление существующего объекта",
+    "steps": "Вернуть объект ID 77; вызвать update с новыми данными.",
+    "expected": "ID сохранён, изменяемое поле обновлено, повторный save не вызывается.",
+    "method": "update",
+    "priority": "Средний"
+  },
+  {
+    "id": "M04-04",
+    "module": 4,
+    "title": "Удаление отсутствующего объекта",
+    "steps": "existsById(999) = false; вызвать delete.",
+    "expected": "EntityNotFoundException; deleteById не вызывается.",
+    "method": "deleteMissing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M05-01",
+    "module": 5,
+    "title": "Создание и маппинг ответа",
+    "steps": "Настроить save на присвоение ID 77; вызвать create с валидным DTO.",
+    "expected": "ID 77, все поля DTO сохранены; repository.save вызван один раз.",
+    "method": "create",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M05-02",
+    "module": 5,
+    "title": "Поиск отсутствующего ID",
+    "steps": "Вернуть Optional.empty для ID 999; вызвать findById.",
+    "expected": "EntityNotFoundException; сохранение не вызывается.",
+    "method": "missing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M05-03",
+    "module": 5,
+    "title": "Обновление существующего объекта",
+    "steps": "Вернуть объект ID 77; вызвать update с новыми данными.",
+    "expected": "ID сохранён, изменяемое поле обновлено, повторный save не вызывается.",
+    "method": "update",
+    "priority": "Средний"
+  },
+  {
+    "id": "M05-04",
+    "module": 5,
+    "title": "Удаление отсутствующего объекта",
+    "steps": "existsById(999) = false; вызвать delete.",
+    "expected": "EntityNotFoundException; deleteById не вызывается.",
+    "method": "deleteMissing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M06-01",
+    "module": 6,
+    "title": "Создание и контракт JSON",
+    "steps": "POST /api/engines с валидным телом.",
+    "expected": "201; положительный ID; все переданные поля ответа равны запросу.",
+    "method": "createContract",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M06-02",
+    "module": 6,
+    "title": "Чтение созданной записи",
+    "steps": "Создать запись; GET /api/engines/{id}.",
+    "expected": "200; ID и все поля равны созданной записи.",
+    "method": "read",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M06-03",
+    "module": 6,
+    "title": "Выдача списка",
+    "steps": "Создать запись; GET /api/engines.",
+    "expected": "200; JSON-массив содержит созданный ID.",
+    "method": "list",
+    "priority": "Средний"
+  },
+  {
+    "id": "M06-04",
+    "module": 6,
+    "title": "Изменение и повторное чтение",
+    "steps": "Создать запись; PUT с полем engineType=DIESEL; GET по ID.",
+    "expected": "200; ID прежний; новые значения сохранены после завершения запроса.",
+    "method": "update",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M06-05",
+    "module": 6,
+    "title": "Удаление и последующий поиск",
+    "steps": "Создать запись; DELETE /api/engines/{id}; GET по ID.",
+    "expected": "204 и пустое тело; последующий GET возвращает 404.",
+    "method": "delete",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M06-06",
+    "module": 6,
+    "title": "Несуществующий идентификатор",
+    "steps": "GET /api/engines/999999999.",
+    "expected": "404; ошибка поиска не превращается в 500.",
+    "method": "missing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M06-07",
+    "module": 6,
+    "title": "Отсутствие обязательных данных",
+    "steps": "POST /api/engines с телом {}.",
+    "expected": "400; некорректная запись не создана.",
+    "method": "invalid",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M07-01",
+    "module": 7,
+    "title": "Создание и контракт JSON",
+    "steps": "POST /api/transmissions с валидным телом.",
+    "expected": "201; положительный ID; все переданные поля ответа равны запросу.",
+    "method": "createContract",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M07-02",
+    "module": 7,
+    "title": "Чтение созданной записи",
+    "steps": "Создать запись; GET /api/transmissions/{id}.",
+    "expected": "200; ID и все поля равны созданной записи.",
+    "method": "read",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M07-03",
+    "module": 7,
+    "title": "Выдача списка",
+    "steps": "Создать запись; GET /api/transmissions.",
+    "expected": "200; JSON-массив содержит созданный ID.",
+    "method": "list",
+    "priority": "Средний"
+  },
+  {
+    "id": "M07-04",
+    "module": 7,
+    "title": "Изменение и повторное чтение",
+    "steps": "Создать запись; PUT с полем transmissionType=AUTOMATIC; GET по ID.",
+    "expected": "200; ID прежний; новые значения сохранены после завершения запроса.",
+    "method": "update",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M07-05",
+    "module": 7,
+    "title": "Удаление и последующий поиск",
+    "steps": "Создать запись; DELETE /api/transmissions/{id}; GET по ID.",
+    "expected": "204 и пустое тело; последующий GET возвращает 404.",
+    "method": "delete",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M07-06",
+    "module": 7,
+    "title": "Несуществующий идентификатор",
+    "steps": "GET /api/transmissions/999999999.",
+    "expected": "404; ошибка поиска не превращается в 500.",
+    "method": "missing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M07-07",
+    "module": 7,
+    "title": "Отсутствие обязательных данных",
+    "steps": "POST /api/transmissions с телом {}.",
+    "expected": "400; некорректная запись не создана.",
+    "method": "invalid",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M08-01",
+    "module": 8,
+    "title": "Создание и контракт JSON",
+    "steps": "POST /api/on-board-computers с валидным телом.",
+    "expected": "201; положительный ID; все переданные поля ответа равны запросу.",
+    "method": "createContract",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M08-02",
+    "module": 8,
+    "title": "Чтение созданной записи",
+    "steps": "Создать запись; GET /api/on-board-computers/{id}.",
+    "expected": "200; ID и все поля равны созданной записи.",
+    "method": "read",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M08-03",
+    "module": 8,
+    "title": "Выдача списка",
+    "steps": "Создать запись; GET /api/on-board-computers.",
+    "expected": "200; JSON-массив содержит созданный ID.",
+    "method": "list",
+    "priority": "Средний"
+  },
+  {
+    "id": "M08-04",
+    "module": 8,
+    "title": "Изменение и повторное чтение",
+    "steps": "Создать запись; PUT с полем firmwareVersion=v2.0; GET по ID.",
+    "expected": "200; ID прежний; новые значения сохранены после завершения запроса.",
+    "method": "update",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M08-05",
+    "module": 8,
+    "title": "Удаление и последующий поиск",
+    "steps": "Создать запись; DELETE /api/on-board-computers/{id}; GET по ID.",
+    "expected": "204 и пустое тело; последующий GET возвращает 404.",
+    "method": "delete",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M08-06",
+    "module": 8,
+    "title": "Несуществующий идентификатор",
+    "steps": "GET /api/on-board-computers/999999999.",
+    "expected": "404; ошибка поиска не превращается в 500.",
+    "method": "missing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M08-07",
+    "module": 8,
+    "title": "Отсутствие обязательных данных",
+    "steps": "POST /api/on-board-computers с телом {}.",
+    "expected": "400; некорректная запись не создана.",
+    "method": "invalid",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M09-01",
+    "module": 9,
+    "title": "Создание и контракт JSON",
+    "steps": "POST /api/wheels с валидным телом.",
+    "expected": "201; положительный ID; все переданные поля ответа равны запросу.",
+    "method": "createContract",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M09-02",
+    "module": 9,
+    "title": "Чтение созданной записи",
+    "steps": "Создать запись; GET /api/wheels/{id}.",
+    "expected": "200; ID и все поля равны созданной записи.",
+    "method": "read",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M09-03",
+    "module": 9,
+    "title": "Выдача списка",
+    "steps": "Создать запись; GET /api/wheels.",
+    "expected": "200; JSON-массив содержит созданный ID.",
+    "method": "list",
+    "priority": "Средний"
+  },
+  {
+    "id": "M09-04",
+    "module": 9,
+    "title": "Изменение и повторное чтение",
+    "steps": "Создать запись; PUT с полем tireBrand=Pirelli; GET по ID.",
+    "expected": "200; ID прежний; новые значения сохранены после завершения запроса.",
+    "method": "update",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M09-05",
+    "module": 9,
+    "title": "Удаление и последующий поиск",
+    "steps": "Создать запись; DELETE /api/wheels/{id}; GET по ID.",
+    "expected": "204 и пустое тело; последующий GET возвращает 404.",
+    "method": "delete",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M09-06",
+    "module": 9,
+    "title": "Несуществующий идентификатор",
+    "steps": "GET /api/wheels/999999999.",
+    "expected": "404; ошибка поиска не превращается в 500.",
+    "method": "missing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M09-07",
+    "module": 9,
+    "title": "Отсутствие обязательных данных",
+    "steps": "POST /api/wheels с телом {}.",
+    "expected": "400; некорректная запись не создана.",
+    "method": "invalid",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M10-01",
+    "module": 10,
+    "title": "Создание и контракт JSON",
+    "steps": "POST /api/vehicles с валидным телом.",
+    "expected": "201; положительный ID; все переданные поля ответа равны запросу.",
+    "method": "createContract",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M10-02",
+    "module": 10,
+    "title": "Чтение созданной записи",
+    "steps": "Создать запись; GET /api/vehicles/{id}.",
+    "expected": "200; ID и все поля равны созданной записи.",
+    "method": "read",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M10-03",
+    "module": 10,
+    "title": "Выдача списка",
+    "steps": "Создать запись; GET /api/vehicles.",
+    "expected": "200; JSON-массив содержит созданный ID.",
+    "method": "list",
+    "priority": "Средний"
+  },
+  {
+    "id": "M10-04",
+    "module": 10,
+    "title": "Изменение и повторное чтение",
+    "steps": "Создать запись; PUT с полем brand=Toyota; GET по ID.",
+    "expected": "200; ID прежний; новые значения сохранены после завершения запроса.",
+    "method": "update",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M10-05",
+    "module": 10,
+    "title": "Удаление и последующий поиск",
+    "steps": "Создать запись; DELETE /api/vehicles/{id}; GET по ID.",
+    "expected": "204 и пустое тело; последующий GET возвращает 404.",
+    "method": "delete",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M10-06",
+    "module": 10,
+    "title": "Несуществующий идентификатор",
+    "steps": "GET /api/vehicles/999999999.",
+    "expected": "404; ошибка поиска не превращается в 500.",
+    "method": "missing",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M10-07",
+    "module": 10,
+    "title": "Отсутствие обязательных данных",
+    "steps": "POST /api/vehicles с телом {}.",
+    "expected": "400; некорректная запись не создана.",
+    "method": "invalid",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-01",
+    "module": 11,
+    "title": "Отрицательная мощность",
+    "steps": "Валидное тело engines; заменить horsepower на -1; POST.",
+    "expected": "HTTP 400; запись не создаётся.",
+    "method": "negativePower",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-02",
+    "module": 11,
+    "title": "Неизвестный тип двигателя",
+    "steps": "Валидное тело engines; заменить engineType на 'STEAM'; POST.",
+    "expected": "HTTP 400; запись не создаётся.",
+    "method": "unknownEngine",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-03",
+    "module": 11,
+    "title": "Некорректная длина VIN",
+    "steps": "Валидное тело vehicles; заменить vin на 'SHORT'; POST.",
+    "expected": "HTTP 400; запись не создаётся.",
+    "method": "badVin",
+    "priority": "Средний"
+  },
+  {
+    "id": "M11-04",
+    "module": 11,
+    "title": "Пустая марка",
+    "steps": "Валидное тело vehicles; заменить brand на '  '; POST.",
+    "expected": "HTTP 400; запись не создаётся.",
+    "method": "blankBrand",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-05",
+    "module": 11,
+    "title": "Отрицательный пробег",
+    "steps": "Валидное тело vehicles; заменить mileageKm на -1; POST.",
+    "expected": "HTTP 400; запись не создаётся.",
+    "method": "negativeMileage",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-06",
+    "module": 11,
+    "title": "Отрицательное число передач",
+    "steps": "Валидное тело transmissions; заменить gearsCount на -1; POST.",
+    "expected": "HTTP 400; запись не создаётся.",
+    "method": "negativeGears",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-07",
+    "module": 11,
+    "title": "Нулевой радиус колеса",
+    "steps": "Валидное тело wheels; заменить radiusInch на 0; POST.",
+    "expected": "HTTP 400; запись не создаётся.",
+    "method": "zeroRadius",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-08",
+    "module": 11,
+    "title": "Отрицательная память",
+    "steps": "Валидное тело on-board-computers; заменить ramMb на -1; POST.",
+    "expected": "HTTP 400; запись не создаётся.",
+    "method": "negativeRam",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-09",
+    "module": 11,
+    "title": "Нулевой объём у электродвигателя",
+    "steps": "Валидное тело engines; engineType=ELECTRIC, volumeLiters=0; POST.",
+    "expected": "HTTP 201; значение 0 сохранено.",
+    "method": "zeroElectricVolume",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-10",
+    "module": 11,
+    "title": "Ноль передач у CVT",
+    "steps": "Валидное тело transmissions; заменить gearsCount на 0; POST.",
+    "expected": "HTTP 201; значение 0 сохранено.",
+    "method": "zeroCvtGears",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-11",
+    "module": 11,
+    "title": "Дубликат серийного номера",
+    "steps": "Дважды POST одного двигателя с одинаковым serialNumber.",
+    "expected": "Второй запрос 409; число записей не изменилось.",
+    "method": "duplicate",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-12",
+    "module": 11,
+    "title": "Повреждённый JSON",
+    "steps": "POST /api/engines с незакрытым JSON {\"engineType\":.",
+    "expected": "400; ответ не содержит успешного ID.",
+    "method": "malformed",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M11-13",
+    "module": 11,
+    "title": "Неподдерживаемый тип тела",
+    "steps": "POST /api/engines с Content-Type text/plain и строкой not json.",
+    "expected": "415 Unsupported Media Type.",
+    "method": "unsupportedContentType",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M12-01",
+    "module": 12,
+    "title": "Сборка автомобиля",
+    "steps": "Создать двигатель, КПП, компьютер и колесо; создать автомобиль со всеми ID.",
+    "expected": "201; GET возвращает все четыре связи с правильными ID.",
+    "method": "assemble",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M12-02",
+    "module": 12,
+    "title": "Несуществующая связь",
+    "steps": "POST автомобиля с engineId=999999999.",
+    "expected": "404; автомобиль не появляется в БД.",
+    "method": "missingRelation",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M12-03",
+    "module": 12,
+    "title": "Повторное назначение двигателя",
+    "steps": "Привязать один двигатель к двум разным автомобилям.",
+    "expected": "Первая запись 201; вторая 409; владелец двигателя не изменён.",
+    "method": "exclusiveEngine",
+    "priority": "Средний"
+  },
+  {
+    "id": "M12-04",
+    "module": 12,
+    "title": "Замена набора колёс",
+    "steps": "Создать автомобиль с первым колесом; PUT со вторым колесом.",
+    "expected": "В GET ровно второе колесо; первый join удалён.",
+    "method": "replaceWheels",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M12-05",
+    "module": 12,
+    "title": "Откат частичного изменения",
+    "steps": "PUT меняет марку, но ссылается на несуществующее колесо.",
+    "expected": "404; исходная марка и набор колёс сохранены.",
+    "method": "rollback",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M12-06",
+    "module": 12,
+    "title": "Удаление компонента",
+    "steps": "Удалить двигатель, связанный с автомобилем.",
+    "expected": "204; автомобиль сохраняется, поле engine становится null.",
+    "method": "deleteComponent",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M12-07",
+    "module": 12,
+    "title": "Удаление автомобиля",
+    "steps": "Удалить автомобиль с колесом.",
+    "expected": "Join удалён; колесо продолжает существовать.",
+    "method": "deleteVehicle",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M12-08",
+    "module": 12,
+    "title": "Очистка набора колёс",
+    "steps": "PUT автомобиля с wheelIds=[].",
+    "expected": "200; wheels=[] и в таблице связей нет строк автомобиля.",
+    "method": "clearWheels",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M13-01",
+    "module": 13,
+    "title": "Создание схемы Liquibase",
+    "steps": "Запустить новый контейнер PostgreSQL; выполнить Liquibase; проверить information_schema.",
+    "expected": "6 доменных таблиц; 14 записей DATABASECHANGELOG.",
+    "method": "schema",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M13-02",
+    "module": 13,
+    "title": "Чтение начальных дат",
+    "steps": "GET /api/vehicles/1 с данными миграции V2.",
+    "expected": "200; createdAt и installedAt равны 2024-01-15T10:00:00.",
+    "method": "seedDates",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M13-03",
+    "module": 13,
+    "title": "Защита внешними ключами PostgreSQL",
+    "steps": "Попытаться вставить vehicle_wheel с vehicle_id=-1 и wheel_id=-1.",
+    "expected": "DataIntegrityViolationException; строка не появляется.",
+    "method": "foreignKeys",
+    "priority": "Средний"
+  },
+  {
+    "id": "M13-04",
+    "module": 13,
+    "title": "Фиксация изменения в БД",
+    "steps": "POST двигателя; проверить запись отдельным JdbcTemplate SELECT.",
+    "expected": "В БД находятся точные serialNumber и horsepower созданного объекта.",
+    "method": "commit",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M13-05",
+    "module": 13,
+    "title": "Последовательности после seed",
+    "steps": "POST каждого из пяти ресурсов после импорта V2.",
+    "expected": "Каждый ID больше максимального seed ID; нет конфликта PK.",
+    "method": "identityAfterSeed",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M13-06",
+    "module": 13,
+    "title": "Повторный запуск миграций",
+    "steps": "Повторно вызвать Liquibase на той же базе.",
+    "expected": "Число changeset и автомобилей не меняется.",
+    "method": "migrationRepeat",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M13-07",
+    "module": 13,
+    "title": "Нативный тип даты PostgreSQL",
+    "steps": "Проверить information_schema.columns для vehicle.created_at.",
+    "expected": "Тип timestamp without time zone.",
+    "method": "nativeTimestampType",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M14-01",
+    "module": 14,
+    "title": "Чтение списка двигателей",
+    "steps": "3 × 300 GET /api/engines; один клиент, 104 исходных записи.",
+    "expected": "Каждый повтор: 0 ошибок; p95 ≤ 100 мс.",
+    "method": "benchmark-engines",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M14-02",
+    "module": 14,
+    "title": "Чтение списка автомобилей",
+    "steps": "3 × 300 GET /api/vehicles; один клиент, 104 записи со связями у трёх исходных автомобилей.",
+    "expected": "Каждый повтор: 0 ошибок; p95 ≤ 100 мс.",
+    "method": "benchmark-vehicles",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M14-03",
+    "module": 14,
+    "title": "Создание двигателей",
+    "steps": "3 × 300 POST /api/engines; уникальные serialNumber.",
+    "expected": "Каждый повтор: 0 ошибок; p95 ≤ 200 мс; целостность записей.",
+    "method": "benchmark-create",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M15-01",
+    "module": 15,
+    "title": "Ступенчатая нагрузка чтения",
+    "steps": "GET /api/vehicles; 1, 8, 32, 64 и 128 клиентов; каждая ступень 5 с.",
+    "expected": "На каждой ступени ошибок < 1%; p95 ≤ 2000 мс.",
+    "method": "stress-read",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M15-02",
+    "module": 15,
+    "title": "Смешанная нагрузка",
+    "steps": "32 клиента, 10 с; 80% GET автомобилей и 20% POST двигателей.",
+    "expected": "Ошибок < 1%; p95 ≤ 2000 мс; записи не теряются.",
+    "method": "stress-mixed-32",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M15-03",
+    "module": 15,
+    "title": "Пиковая запись",
+    "steps": "128 клиентов, 8 с; непрерывный POST двигателей.",
+    "expected": "Ошибок < 1%; p95 ≤ 2000 мс; уникальные serialNumber сохраняются.",
+    "method": "stress-write-128",
+    "priority": "Высокий"
+  },
+  {
+    "id": "M15-04",
+    "module": 15,
+    "title": "Восстановление после пика",
+    "steps": "200 последовательных GET автомобилей после стресса; сравнить с исходными 200 GET.",
+    "expected": "0 ошибок; p95 ≤ 3 × исходный p95 + 50 мс; число успешных POST равно числу сохранённых записей.",
+    "method": "stress-recovery",
+    "priority": "Высокий"
+  }
+]

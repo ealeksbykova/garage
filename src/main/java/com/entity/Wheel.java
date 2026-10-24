@@ -20,7 +20,7 @@ public class Wheel {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 10)
+    @Column(nullable = false, length = 16)
     private Position position;
 
     @Column(name = "radius_inch", nullable = false, precision = 4, scale = 1)
