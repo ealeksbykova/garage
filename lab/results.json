@@ -1,0 +1,1262 @@
+{
+  "source_commit": "92a9cdadd73fc96eecbd40f38393a8d6163b6e5e",
+  "results_collected_at": "2026-10-24T12:01:10.005704+03:00",
+  "environment": {
+    "host": "Apple M1 Pro, 10 logical CPU, 32 GiB RAM",
+    "os": "macOS 26.6.2 arm64",
+    "java": "OpenJDK 21.0.8",
+    "gradle": "9.0.0",
+    "jdbc": "PostgreSQL JDBC 42.7.13",
+    "docker": "27.4.0, Colima VM with 8 CPU and 8307273728 bytes RAM",
+    "tested_database": "PostgreSQL 17.11, pinned image",
+    "ordinary_compose": "Unchanged upstream PostgreSQL 16 Alpine; no performance claim for it"
+  },
+  "baseline_definition": "Upstream PostgreSQL V1/V2 with V3 sequence repair and the same test suite; original Request DTOs, no ApiExceptionHandler",
+  "junit": {
+    "baseline": {
+      "total": 83,
+      "passed": 56,
+      "failed": 27,
+      "skipped": 0
+    },
+    "final": {
+      "total": 83,
+      "passed": 83,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "M01-01",
+      "module": 1,
+      "title": "Создание и маппинг ответа",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M01-02",
+      "module": 1,
+      "title": "Поиск отсутствующего ID",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M01-03",
+      "module": 1,
+      "title": "Обновление существующего объекта",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M01-04",
+      "module": 1,
+      "title": "Удаление отсутствующего объекта",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M02-01",
+      "module": 2,
+      "title": "Создание и маппинг ответа",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M02-02",
+      "module": 2,
+      "title": "Поиск отсутствующего ID",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M02-03",
+      "module": 2,
+      "title": "Обновление существующего объекта",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M02-04",
+      "module": 2,
+      "title": "Удаление отсутствующего объекта",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M03-01",
+      "module": 3,
+      "title": "Создание и маппинг ответа",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M03-02",
+      "module": 3,
+      "title": "Поиск отсутствующего ID",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M03-03",
+      "module": 3,
+      "title": "Обновление существующего объекта",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M03-04",
+      "module": 3,
+      "title": "Удаление отсутствующего объекта",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M04-01",
+      "module": 4,
+      "title": "Создание и маппинг ответа",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M04-02",
+      "module": 4,
+      "title": "Поиск отсутствующего ID",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M04-03",
+      "module": 4,
+      "title": "Обновление существующего объекта",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M04-04",
+      "module": 4,
+      "title": "Удаление отсутствующего объекта",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M05-01",
+      "module": 5,
+      "title": "Создание и маппинг ответа",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M05-02",
+      "module": 5,
+      "title": "Поиск отсутствующего ID",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M05-03",
+      "module": 5,
+      "title": "Обновление существующего объекта",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M05-04",
+      "module": 5,
+      "title": "Удаление отсутствующего объекта",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M06-01",
+      "module": 6,
+      "title": "Создание и контракт JSON",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M06-02",
+      "module": 6,
+      "title": "Чтение созданной записи",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M06-03",
+      "module": 6,
+      "title": "Выдача списка",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M06-04",
+      "module": 6,
+      "title": "Изменение и повторное чтение",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M06-05",
+      "module": 6,
+      "title": "Удаление и последующий поиск",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M06-06",
+      "module": 6,
+      "title": "Несуществующий идентификатор",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M06-07",
+      "module": 6,
+      "title": "Отсутствие обязательных данных",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M07-01",
+      "module": 7,
+      "title": "Создание и контракт JSON",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M07-02",
+      "module": 7,
+      "title": "Чтение созданной записи",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M07-03",
+      "module": 7,
+      "title": "Выдача списка",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M07-04",
+      "module": 7,
+      "title": "Изменение и повторное чтение",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M07-05",
+      "module": 7,
+      "title": "Удаление и последующий поиск",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M07-06",
+      "module": 7,
+      "title": "Несуществующий идентификатор",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M07-07",
+      "module": 7,
+      "title": "Отсутствие обязательных данных",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M08-01",
+      "module": 8,
+      "title": "Создание и контракт JSON",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M08-02",
+      "module": 8,
+      "title": "Чтение созданной записи",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M08-03",
+      "module": 8,
+      "title": "Выдача списка",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M08-04",
+      "module": 8,
+      "title": "Изменение и повторное чтение",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M08-05",
+      "module": 8,
+      "title": "Удаление и последующий поиск",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M08-06",
+      "module": 8,
+      "title": "Несуществующий идентификатор",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M08-07",
+      "module": 8,
+      "title": "Отсутствие обязательных данных",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M09-01",
+      "module": 9,
+      "title": "Создание и контракт JSON",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M09-02",
+      "module": 9,
+      "title": "Чтение созданной записи",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M09-03",
+      "module": 9,
+      "title": "Выдача списка",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M09-04",
+      "module": 9,
+      "title": "Изменение и повторное чтение",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M09-05",
+      "module": 9,
+      "title": "Удаление и последующий поиск",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M09-06",
+      "module": 9,
+      "title": "Несуществующий идентификатор",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M09-07",
+      "module": 9,
+      "title": "Отсутствие обязательных данных",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M10-01",
+      "module": 10,
+      "title": "Создание и контракт JSON",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M10-02",
+      "module": 10,
+      "title": "Чтение созданной записи",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M10-03",
+      "module": 10,
+      "title": "Выдача списка",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M10-04",
+      "module": 10,
+      "title": "Изменение и повторное чтение",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M10-05",
+      "module": 10,
+      "title": "Удаление и последующий поиск",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M10-06",
+      "module": 10,
+      "title": "Несуществующий идентификатор",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M10-07",
+      "module": 10,
+      "title": "Отсутствие обязательных данных",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-01",
+      "module": 11,
+      "title": "Отрицательная мощность",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-02",
+      "module": 11,
+      "title": "Неизвестный тип двигателя",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-03",
+      "module": 11,
+      "title": "Некорректная длина VIN",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-04",
+      "module": 11,
+      "title": "Пустая марка",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-05",
+      "module": 11,
+      "title": "Отрицательный пробег",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-06",
+      "module": 11,
+      "title": "Отрицательное число передач",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-07",
+      "module": 11,
+      "title": "Нулевой радиус колеса",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-08",
+      "module": 11,
+      "title": "Отрицательная память",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-09",
+      "module": 11,
+      "title": "Нулевой объём у электродвигателя",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-10",
+      "module": 11,
+      "title": "Ноль передач у CVT",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-11",
+      "module": 11,
+      "title": "Дубликат серийного номера",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-12",
+      "module": 11,
+      "title": "Повреждённый JSON",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M11-13",
+      "module": 11,
+      "title": "Неподдерживаемый тип тела",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M12-01",
+      "module": 12,
+      "title": "Сборка автомобиля",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M12-02",
+      "module": 12,
+      "title": "Несуществующая связь",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M12-03",
+      "module": 12,
+      "title": "Повторное назначение двигателя",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M12-04",
+      "module": 12,
+      "title": "Замена набора колёс",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M12-05",
+      "module": 12,
+      "title": "Откат частичного изменения",
+      "baseline_status": "FAIL",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M12-06",
+      "module": 12,
+      "title": "Удаление компонента",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M12-07",
+      "module": 12,
+      "title": "Удаление автомобиля",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M12-08",
+      "module": 12,
+      "title": "Очистка набора колёс",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M13-01",
+      "module": 13,
+      "title": "Создание схемы Liquibase",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M13-02",
+      "module": 13,
+      "title": "Чтение начальных дат",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M13-03",
+      "module": 13,
+      "title": "Защита внешними ключами PostgreSQL",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M13-04",
+      "module": 13,
+      "title": "Фиксация изменения в БД",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M13-05",
+      "module": 13,
+      "title": "Последовательности после seed",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M13-06",
+      "module": 13,
+      "title": "Повторный запуск миграций",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M13-07",
+      "module": 13,
+      "title": "Нативный тип даты PostgreSQL",
+      "baseline_status": "PASS",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M14-01",
+      "module": 14,
+      "title": "Чтение списка двигателей",
+      "baseline_status": "NOT_RUN",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M14-02",
+      "module": 14,
+      "title": "Чтение списка автомобилей",
+      "baseline_status": "NOT_RUN",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M14-03",
+      "module": 14,
+      "title": "Создание двигателей",
+      "baseline_status": "NOT_RUN",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M15-01",
+      "module": 15,
+      "title": "Ступенчатая нагрузка чтения",
+      "baseline_status": "NOT_RUN",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M15-02",
+      "module": 15,
+      "title": "Смешанная нагрузка",
+      "baseline_status": "NOT_RUN",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M15-03",
+      "module": 15,
+      "title": "Пиковая запись",
+      "baseline_status": "NOT_RUN",
+      "final_status": "PASS"
+    },
+    {
+      "id": "M15-04",
+      "module": 15,
+      "title": "Восстановление после пика",
+      "baseline_status": "NOT_RUN",
+      "final_status": "PASS"
+    }
+  ],
+  "coverage": {
+    "all": {
+      "INSTRUCTION": {
+        "missed": 76,
+        "covered": 1294,
+        "percent": 94.45255474452554
+      },
+      "BRANCH": {
+        "missed": 19,
+        "covered": 47,
+        "percent": 71.21212121212122
+      },
+      "LINE": {
+        "missed": 15,
+        "covered": 263,
+        "percent": 94.60431654676259
+      },
+      "COMPLEXITY": {
+        "missed": 27,
+        "covered": 107,
+        "percent": 79.85074626865672
+      },
+      "METHOD": {
+        "missed": 8,
+        "covered": 93,
+        "percent": 92.07920792079207
+      },
+      "CLASS": {
+        "missed": 0,
+        "covered": 23,
+        "percent": 100.0
+      }
+    },
+    "com": {
+      "INSTRUCTION": {
+        "missed": 5,
+        "covered": 3,
+        "percent": 37.5
+      },
+      "LINE": {
+        "missed": 2,
+        "covered": 1,
+        "percent": 33.333333333333336
+      },
+      "COMPLEXITY": {
+        "missed": 1,
+        "covered": 1,
+        "percent": 50.0
+      },
+      "METHOD": {
+        "missed": 1,
+        "covered": 1,
+        "percent": 50.0
+      },
+      "CLASS": {
+        "missed": 0,
+        "covered": 1,
+        "percent": 100.0
+      }
+    },
+    "com/service": {
+      "INSTRUCTION": {
+        "missed": 44,
+        "covered": 502,
+        "percent": 91.94139194139194
+      },
+      "BRANCH": {
+        "missed": 0,
+        "covered": 20,
+        "percent": 100.0
+      },
+      "LINE": {
+        "missed": 0,
+        "covered": 88,
+        "percent": 100.0
+      },
+      "COMPLEXITY": {
+        "missed": 7,
+        "covered": 43,
+        "percent": 86.0
+      },
+      "METHOD": {
+        "missed": 7,
+        "covered": 33,
+        "percent": 82.5
+      },
+      "CLASS": {
+        "missed": 0,
+        "covered": 5,
+        "percent": 100.0
+      }
+    },
+    "com/repository": {},
+    "com/entity": {
+      "INSTRUCTION": {
+        "missed": 0,
+        "covered": 81,
+        "percent": 100.0
+      },
+      "LINE": {
+        "missed": 0,
+        "covered": 3,
+        "percent": 100.0
+      },
+      "COMPLEXITY": {
+        "missed": 0,
+        "covered": 3,
+        "percent": 100.0
+      },
+      "METHOD": {
+        "missed": 0,
+        "covered": 3,
+        "percent": 100.0
+      },
+      "CLASS": {
+        "missed": 0,
+        "covered": 3,
+        "percent": 100.0
+      }
+    },
+    "com/dto": {},
+    "com/controller": {
+      "INSTRUCTION": {
+        "missed": 0,
+        "covered": 141,
+        "percent": 100.0
+      },
+      "LINE": {
+        "missed": 0,
+        "covered": 33,
+        "percent": 100.0
+      },
+      "COMPLEXITY": {
+        "missed": 0,
+        "covered": 29,
+        "percent": 100.0
+      },
+      "METHOD": {
+        "missed": 0,
+        "covered": 29,
+        "percent": 100.0
+      },
+      "CLASS": {
+        "missed": 0,
+        "covered": 6,
+        "percent": 100.0
+      }
+    },
+    "com/mapper": {
+      "INSTRUCTION": {
+        "missed": 27,
+        "covered": 567,
+        "percent": 95.45454545454545
+      },
+      "BRANCH": {
+        "missed": 19,
+        "covered": 27,
+        "percent": 58.69565217391305
+      },
+      "LINE": {
+        "missed": 13,
+        "covered": 138,
+        "percent": 91.3907284768212
+      },
+      "COMPLEXITY": {
+        "missed": 19,
+        "covered": 31,
+        "percent": 62.0
+      },
+      "METHOD": {
+        "missed": 0,
+        "covered": 27,
+        "percent": 100.0
+      },
+      "CLASS": {
+        "missed": 0,
+        "covered": 8,
+        "percent": 100.0
+      }
+    }
+  },
+  "benchmark": {
+    "timestamp": "2026-10-24T11:59:10+0300",
+    "mode": "benchmark",
+    "java_heap": "128m/512m",
+    "server": "127.0.0.1",
+    "database": {
+      "url": "jdbc:postgresql://127.0.0.1:32768/garage_perf",
+      "version": "PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+      "digest": "[\"postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3\"]"
+    },
+    "hikari_pool": 10,
+    "warmup": 100,
+    "fixture_engines": 104,
+    "fixture_vehicles": 104,
+    "summaries": [
+      {
+        "name": "benchmark-engines-1",
+        "clients": 1,
+        "requests": 300,
+        "elapsed_s": 1.3411718749999988,
+        "rps": 223.68497699073825,
+        "mean_ms": 4.461866250000028,
+        "p50_ms": 4.395000000000593,
+        "p95_ms": 5.297709000000594,
+        "p99_ms": 6.715458000000396,
+        "max_ms": 8.768625000000085,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 300
+        }
+      },
+      {
+        "name": "benchmark-engines-2",
+        "clients": 1,
+        "requests": 300,
+        "elapsed_s": 1.4259275000000002,
+        "rps": 210.38937814159553,
+        "mean_ms": 4.744539513333296,
+        "p50_ms": 4.541791000001183,
+        "p95_ms": 6.3786669999998935,
+        "p99_ms": 7.846582999999185,
+        "max_ms": 9.165790999999146,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 300
+        }
+      },
+      {
+        "name": "benchmark-engines-3",
+        "clients": 1,
+        "requests": 300,
+        "elapsed_s": 1.2703341669999997,
+        "rps": 236.1583336048302,
+        "mean_ms": 4.226331666666692,
+        "p50_ms": 3.9570419999996886,
+        "p95_ms": 5.427707999999143,
+        "p99_ms": 7.091250000000215,
+        "max_ms": 30.714666999999807,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 300
+        }
+      },
+      {
+        "name": "benchmark-vehicles-1",
+        "clients": 1,
+        "requests": 300,
+        "elapsed_s": 1.6241701670000008,
+        "rps": 184.7097096692331,
+        "mean_ms": 5.3986225266666805,
+        "p50_ms": 4.985417000000325,
+        "p95_ms": 7.128374999998854,
+        "p99_ms": 10.850040999999422,
+        "max_ms": 53.288375000001054,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 300
+        }
+      },
+      {
+        "name": "benchmark-vehicles-2",
+        "clients": 1,
+        "requests": 300,
+        "elapsed_s": 1.3598645419999986,
+        "rps": 220.61020839530082,
+        "mean_ms": 4.517733886666733,
+        "p50_ms": 4.405124999999899,
+        "p95_ms": 5.512291000000502,
+        "p99_ms": 6.820917000000648,
+        "max_ms": 8.929791999999992,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 300
+        }
+      },
+      {
+        "name": "benchmark-vehicles-3",
+        "clients": 1,
+        "requests": 300,
+        "elapsed_s": 1.2831376669999983,
+        "rps": 233.8018809013736,
+        "mean_ms": 4.262721499999961,
+        "p50_ms": 4.143250000002041,
+        "p95_ms": 5.108832999997759,
+        "p99_ms": 6.362958000000418,
+        "max_ms": 11.036457999999527,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 300
+        }
+      },
+      {
+        "name": "benchmark-create-1",
+        "clients": 1,
+        "requests": 300,
+        "elapsed_s": 1.0421488750000023,
+        "rps": 287.8667407283814,
+        "mean_ms": 3.467352646666839,
+        "p50_ms": 3.3767910000008783,
+        "p95_ms": 4.067792000000736,
+        "p99_ms": 6.2480410000027575,
+        "max_ms": 12.627250000001311,
+        "errors": 0,
+        "write_ratio": 1,
+        "counts": {
+          "201": 300
+        }
+      },
+      {
+        "name": "benchmark-create-2",
+        "clients": 1,
+        "requests": 300,
+        "elapsed_s": 1.011126375,
+        "rps": 296.69881769229886,
+        "mean_ms": 3.363872653333241,
+        "p50_ms": 3.322582999999213,
+        "p95_ms": 3.8700419999990743,
+        "p99_ms": 4.406542000001679,
+        "max_ms": 4.646832999998907,
+        "errors": 0,
+        "write_ratio": 1,
+        "counts": {
+          "201": 300
+        }
+      },
+      {
+        "name": "benchmark-create-3",
+        "clients": 1,
+        "requests": 300,
+        "elapsed_s": 0.9784546670000012,
+        "rps": 306.60592679251806,
+        "mean_ms": 3.255045830000102,
+        "p50_ms": 3.144250000001847,
+        "p95_ms": 4.204125000001113,
+        "p99_ms": 6.332541999999108,
+        "max_ms": 7.801374999999666,
+        "errors": 0,
+        "write_ratio": 1,
+        "counts": {
+          "201": 300
+        }
+      }
+    ],
+    "integrity": {
+      "expected_created": 1000,
+      "actual_created": 1000,
+      "unique": true,
+      "passed": true
+    }
+  },
+  "stress": {
+    "timestamp": "2026-10-24T12:00:05+0300",
+    "mode": "stress",
+    "java_heap": "128m/512m",
+    "server": "127.0.0.1",
+    "database": {
+      "url": "jdbc:postgresql://127.0.0.1:32769/garage_perf",
+      "version": "PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+      "digest": "[\"postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3\"]"
+    },
+    "hikari_pool": 10,
+    "warmup": 100,
+    "fixture_engines": 104,
+    "fixture_vehicles": 104,
+    "summaries": [
+      {
+        "name": "stress-baseline",
+        "clients": 1,
+        "requests": 200,
+        "elapsed_s": 1.133868875000001,
+        "rps": 176.3872387801454,
+        "mean_ms": 5.654634390000091,
+        "p50_ms": 5.1058749999999264,
+        "p95_ms": 7.506750000001006,
+        "p99_ms": 12.175208000000382,
+        "max_ms": 38.03325000000157,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 200
+        }
+      },
+      {
+        "name": "stress-read-1",
+        "clients": 1,
+        "requests": 1074,
+        "elapsed_s": 5.002551959000002,
+        "rps": 214.69042376817012,
+        "mean_ms": 4.642736135009335,
+        "p50_ms": 4.414750000000467,
+        "p95_ms": 5.617082999998857,
+        "p99_ms": 8.930874999999006,
+        "max_ms": 41.61587500000152,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 1074
+        }
+      },
+      {
+        "name": "stress-read-8",
+        "clients": 8,
+        "requests": 6009,
+        "elapsed_s": 5.004516375,
+        "rps": 1200.7154237755892,
+        "mean_ms": 6.641471722416383,
+        "p50_ms": 6.15962499999867,
+        "p95_ms": 10.256083999998111,
+        "p99_ms": 14.070625000000447,
+        "max_ms": 47.032791999999546,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 6009
+        }
+      },
+      {
+        "name": "stress-read-32",
+        "clients": 32,
+        "requests": 8223,
+        "elapsed_s": 5.009292708,
+        "rps": 1641.5491126856307,
+        "mean_ms": 19.456689667517967,
+        "p50_ms": 18.84824999999779,
+        "p95_ms": 29.68624999999747,
+        "p99_ms": 39.94829200000183,
+        "max_ms": 88.61249999999998,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 8223
+        }
+      },
+      {
+        "name": "stress-read-64",
+        "clients": 64,
+        "requests": 10104,
+        "elapsed_s": 5.028514542,
+        "rps": 2009.3409128297594,
+        "mean_ms": 31.740251796120365,
+        "p50_ms": 30.25991700000219,
+        "p95_ms": 53.65729200000047,
+        "p99_ms": 80.24029199999916,
+        "max_ms": 145.60325000000063,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 10104
+        }
+      },
+      {
+        "name": "stress-read-128",
+        "clients": 128,
+        "requests": 9095,
+        "elapsed_s": 5.062420458999998,
+        "rps": 1796.5714372520877,
+        "mean_ms": 70.76244982122046,
+        "p50_ms": 69.33879199999637,
+        "p95_ms": 119.61412499999824,
+        "p99_ms": 151.87483300000082,
+        "max_ms": 283.99575000000254,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 9095
+        }
+      },
+      {
+        "name": "stress-mixed-32",
+        "clients": 32,
+        "requests": 17321,
+        "elapsed_s": 10.061173584000002,
+        "rps": 1721.568548180611,
+        "mean_ms": 18.540411754690865,
+        "p50_ms": 17.48479199999764,
+        "p95_ms": 28.717291999996064,
+        "p99_ms": 47.9484160000041,
+        "max_ms": 153.28166700000168,
+        "errors": 0,
+        "write_ratio": 0.2,
+        "counts": {
+          "200": 13857,
+          "201": 3464
+        }
+      },
+      {
+        "name": "stress-write-128",
+        "clients": 128,
+        "requests": 21961,
+        "elapsed_s": 8.054662208000003,
+        "rps": 2726.495467207554,
+        "mean_ms": 46.7862867174081,
+        "p50_ms": 43.619124999999315,
+        "p95_ms": 77.65462500000098,
+        "p99_ms": 114.41299999999899,
+        "max_ms": 216.86304100000342,
+        "errors": 0,
+        "write_ratio": 1,
+        "counts": {
+          "201": 21961
+        }
+      },
+      {
+        "name": "stress-recovery",
+        "clients": 1,
+        "requests": 200,
+        "elapsed_s": 0.5854837090000018,
+        "rps": 341.597890642589,
+        "mean_ms": 2.912639000000077,
+        "p50_ms": 2.6648330000043075,
+        "p95_ms": 3.1617499999967436,
+        "p99_ms": 9.824584000000414,
+        "max_ms": 24.664125000001036,
+        "errors": 0,
+        "write_ratio": 0,
+        "counts": {
+          "200": 200
+        }
+      }
+    ],
+    "integrity": {
+      "expected_created": 25525,
+      "actual_created": 25525,
+      "unique": true,
+      "passed": true
+    }
+  },
+  "tested_source_sha256": {
+    "src/main/java/com/Main.java": "0b737c8a23006cd4a93eeeaaae0f99acac87900d7d17a4aaff4859ec929cdb2b",
+    "src/main/java/com/controller/ApiExceptionHandler.java": "d00140d135938a5d59f89a27f37f86c0ae2a6bac5401bf99b1af08e06b6c384a",
+    "src/main/java/com/controller/EngineController.java": "9b12f45c5ec400b0c04933f4686e0ae1418710f0dde800bdb0110a23b7488fd3",
+    "src/main/java/com/controller/OnBoardComputerController.java": "5ed1e82031b5c400a29e4ee407c666b753109c49c0c34af9e7f6b4da0decc487",
+    "src/main/java/com/controller/TransmissionController.java": "c5d6660405882102f78d22166ce9df921c6cb5422133c8cdb3933b8e008ac135",
+    "src/main/java/com/controller/VehicleController.java": "7263b7bd6fd6579301a3ac6a1440dcc89068a3eb3264d183a651e2fc18cdb4d0",
+    "src/main/java/com/controller/WheelController.java": "a531833006846548511d666f5a0331efad04f05abd530594a1418a601ab07ec9",
+    "src/main/java/com/dto/EngineRequest.java": "e3156df0081a14a766ac18623f5c2f35dd8d591bd47647d42cac27627b569fc5",
+    "src/main/java/com/dto/EngineResponse.java": "d3bf48652cca78f518ed93190e615965a1e3719206ba5c37d9079c8fa0df1dba",
+    "src/main/java/com/dto/OnBoardComputerRequest.java": "dcf37f58776d4cbe66529a11a3a3fbf3f848c877cda6b01f5f4af803372eebc5",
+    "src/main/java/com/dto/OnBoardComputerResponse.java": "9321806104dac2ffff2c390beee7f421aa6fd5cd427316ba7d3bdbba04394f76",
+    "src/main/java/com/dto/TransmissionRequest.java": "34b9cdf8adc7b8f94bf7c12fbe2e8cc7633413f138da15de6de53adfe083ea0f",
+    "src/main/java/com/dto/TransmissionResponse.java": "9e49dc38bb97dcd8d675a7e9011c67ef9e126c8cf0224d047c88cdf9089b985e",
+    "src/main/java/com/dto/VehicleRequest.java": "febecac4e375b02a29e44a25917acef4a257c60f7d63ca265f6062f470e07fd1",
+    "src/main/java/com/dto/VehicleResponse.java": "86bf5fb7069bc05f86f609c6d3ca98b7fac3755bdde75e7fe39a1dc18cb69273",
+    "src/main/java/com/dto/WheelRequest.java": "1402f3986c88c0fd0b47ece44205a29e595aca39053d7fe9ba8a2c47aaedb00d",
+    "src/main/java/com/dto/WheelResponse.java": "6beb01b166ee383f03d1ec5f4f3ce3c19937f2d74441dced594b925209d890e6",
+    "src/main/java/com/entity/Engine.java": "da5be683b907c20553971a8ec65b852558d3ac4df6f7eebf4989382d081e7e61",
+    "src/main/java/com/entity/OnBoardComputer.java": "13f52e08af57d35d6fe0c8647d4e0972ddf0187785d368b097cfd66a26bbf409",
+    "src/main/java/com/entity/Transmission.java": "0ffca088c43d1150546ecb639601fe27b991470a7a102fa46f0f76f7821c3ba0",
+    "src/main/java/com/entity/Vehicle.java": "1f7a20507ed8e33c82e251447964f62319034798141f3e3674a4a4d7a86aea77",
+    "src/main/java/com/entity/Wheel.java": "d0929f7817aa5e818b4ff4eea2b9f2474c30d147ebfb347707c24f93b6b5e1d0",
+    "src/main/java/com/mapper/EngineMapper.java": "95b2d74671f7b3a0f3ce075c1a7c4b3dfc5eade8695f40e11e3fb2a456f30f38",
+    "src/main/java/com/mapper/OnBoardComputerMapper.java": "82b400d78c372967f1a62fb953085bb65cf84e5fba4fc0919bfeb079c8284d5a",
+    "src/main/java/com/mapper/TransmissionMapper.java": "564ce1adb8b6465e5565453ef8f3548be00d7851e0558ebed94e41c3ebc46206",
+    "src/main/java/com/mapper/VehicleMapper.java": "ff3b4574e8e8f1fc5b943ee1a88b08e6cb9dc7ff79f6867352f47d99e40faa66",
+    "src/main/java/com/mapper/WheelMapper.java": "6787cd5248ce8d11d12306fcf019505cbd52191e6488f8dafdab12cfdcd7a500",
+    "src/main/java/com/repository/EngineRepository.java": "3122defeaaa637f044b0d53b4a857fb69323bf0624a05121992918ffc7c9c724",
+    "src/main/java/com/repository/OnBoardComputerRepository.java": "44bcda0d07530d5b2bccce8c45a4398b13b2de38b2d8bf01d8fb755cd4be8be2",
+    "src/main/java/com/repository/TransmissionRepository.java": "b1d4a0f68122e67b0c9e61375c1f62800741ec41e5ea37da0da294ff42cefeee",
+    "src/main/java/com/repository/VehicleRepository.java": "93191f9b293ada2f1f90306ee38c4d41ede311b430a8158f7a46c1d3ff085adb",
+    "src/main/java/com/repository/WheelRepository.java": "eb13f263cb9e48987574d044c7bf5227b939166b7f5805d447f752929a38c095",
+    "src/main/java/com/service/EngineService.java": "28ecb778b3af6dd5b2e81500e5fb52e2f1840b0361a5592a23915a7f0627126d",
+    "src/main/java/com/service/OnBoardComputerService.java": "e685957a9828997ece8626e898a10823b70cb1c845788bf11c899d6196651654",
+    "src/main/java/com/service/TransmissionService.java": "3bd8e2b184cdf3be97726b7239523dce5ddd290f67e36bcd8308ff1dbd96a1cc",
+    "src/main/java/com/service/VehicleService.java": "6b52975e072f4f87d9de328a2cfe26b71ecf6893158809068da71eb9a1396956",
+    "src/main/java/com/service/WheelService.java": "2947403b407fcade4ab918b90810b41691b1bee4320f57bc3027d69e7067183a",
+    "src/main/resources/application.yml": "6c227b6217b2d9ada4035ec309e275b9cedc589f02d8e224df7fe0b79163c998",
+    "src/main/resources/db/changelog/changeset/V1__init_database.sql": "803f1984e0fa25a823aaeec8553c2d4d58823c3c57c3901731db42fdb4a9225f",
+    "src/main/resources/db/changelog/changeset/V2__insert_data.sql": "b9d9a36869871a2a6926605a9c2fbafba6f05434edd4b692b57743430a5879b2",
+    "src/main/resources/db/changelog/db.changelog-master.yaml": "f63faab9c5dfcedc6d871175e7a1ad4ab9b390df299844d7592bd6965ae0f07a",
+    "src/main/resources/db/changelog/postgresql/V3__identity_sequences.sql": "92e26060a5886aa0c27aee096d05cbc7dcabaaf3be4f511131378247f71ef4eb",
+    "src/test/java/com/lab/ApiTestBase.java": "d5e4b2e12ab6ff14fb9eec50c0d2b74d01acc5a730b3afd38ab49550a9e3126e",
+    "src/test/java/com/lab/EngineApiTest.java": "5ef34c16b18f3719536a6e7758efa3f2f5deeca4e3c77d7c9652f66d2f47f0f8",
+    "src/test/java/com/lab/EngineServiceTest.java": "2348e92c73fc60e807c11f63d2b2bc01db99385a7f8b3ec50849acc7342b5756",
+    "src/test/java/com/lab/OnBoardComputerApiTest.java": "ed6ae481a5d821182cf8c23d48096619d00dfa867f1a23c8e092c5eeaf6d4c7f",
+    "src/test/java/com/lab/OnBoardComputerServiceTest.java": "b8c34b696882938729e7538ea5307592d9826d8fab56bad2ad1d61a5c0a6ed0b",
+    "src/test/java/com/lab/PersistenceTest.java": "35b601f26b65240ba18201a66d7e166ce0bec2835bae3045c32d145c81ba06af",
+    "src/test/java/com/lab/RelationsApiTest.java": "c5d5e927de9a0f1ac17de5b5189d9354f8238aec5828c4074a2a18f6cb9a6d34",
+    "src/test/java/com/lab/TransmissionApiTest.java": "d8a7c5e24143bc63bc1916c3d552e9d5a3bee33a38b968bbeaae202ea6be9b7a",
+    "src/test/java/com/lab/TransmissionServiceTest.java": "b47e3a724ea32cc16cd17f28827e0e99bb291c6fe108e4aca405466c0a6098b2",
+    "src/test/java/com/lab/ValidationApiTest.java": "37ab9885507aba3bae5ab9b54acb1c8ef5bb27f52ad03c7333c1ed71b6a07abc",
+    "src/test/java/com/lab/VehicleApiTest.java": "6d82a06df7139918008149c5b53c346414621d5262e0c3ab3d9c02723cd6951b",
+    "src/test/java/com/lab/VehicleServiceTest.java": "727183ef326179acbd9cdbe60c873b855dfca11779a3e562fb00ab35bb5955d7",
+    "src/test/java/com/lab/WheelApiTest.java": "4e748aecfcb21059da4bf12b1a847725097198d6e40d788fc697db2891b26b70",
+    "src/test/java/com/lab/WheelServiceTest.java": "2e6cf873403f15830865854382d52ecc4ec567a56ee0a2413c23d24676907756",
+    "build.gradle.kts": "5685fb082f05d25658bffe1c49308c785e3154f4730da491796c7d6f6dd7f79b",
+    "settings.gradle.kts": "255d21063f18bef37f6fdf97c20b1d0c05a696d7a7eb5be75059c23c0bdcc45d",
+    "lab/performance.py": "1bfbe0422ab1e14a9d84e38140303664f9320f481fddcb79a6fa3c65461e9320",
+    "compose.lab.yaml": "fa036a7d517df31e43e1033c2282fe19cde3271e8f67fffedd19a40ed8dfec22"
+  },
+  "report": {
+    "pages": 28,
+    "main_text_listings": 23,
+    "total_listings": 24
+  }
+}

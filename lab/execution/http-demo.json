@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-10-24T12:00:11.973698+03:00",
+  "database": {
+    "url": "jdbc:postgresql://127.0.0.1:32770/garage_perf",
+    "version": "PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+    "digest": "[\"postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3\"]"
+  },
+  "base_url": "http://127.0.0.1:64908",
+  "records": [
+    {
+      "name": "Создание двигателя",
+      "command_args": [
+        "curl",
+        "-sS",
+        "-i",
+        "--request",
+        "POST",
+        "http://127.0.0.1:64908/api/engines",
+        "--header",
+        "Content-Type: application/json",
+        "--data-binary",
+        "@-"
+      ],
+      "stdin": "{\n  \"engineType\": \"PETROL\",\n  \"horsepower\": 110,\n  \"serialNumber\": \"DOC-DEMO-001\"\n}\n",
+      "status": 201,
+      "headers": "HTTP/1.1 201 \nContent-Type: application/json\nTransfer-Encoding: chunked\nDate: Sat, 24 Oct 2026 09:00:11 GMT",
+      "response": {
+        "id": 5,
+        "engineType": "PETROL",
+        "volumeLiters": null,
+        "horsepower": 110,
+        "torqueNm": null,
+        "serialNumber": "DOC-DEMO-001"
+      },
+      "raw_stdout": "HTTP/1.1 201 \nContent-Type: application/json\nTransfer-Encoding: chunked\nDate: Sat, 24 Oct 2026 09:00:11 GMT\n\n{\"id\":5,\"engineType\":\"PETROL\",\"volumeLiters\":null,\"horsepower\":110,\"torqueNm\":null,\"serialNumber\":\"DOC-DEMO-001\"}"
+    },
+    {
+      "name": "Чтение созданного двигателя",
+      "command_args": [
+        "curl",
+        "-sS",
+        "-i",
+        "--request",
+        "GET",
+        "http://127.0.0.1:64908/api/engines/5"
+      ],
+      "stdin": "",
+      "status": 200,
+      "headers": "HTTP/1.1 200 \nContent-Type: application/json\nTransfer-Encoding: chunked\nDate: Sat, 24 Oct 2026 09:00:11 GMT",
+      "response": {
+        "id": 5,
+        "engineType": "PETROL",
+        "volumeLiters": null,
+        "horsepower": 110,
+        "torqueNm": null,
+        "serialNumber": "DOC-DEMO-001"
+      },
+      "raw_stdout": "HTTP/1.1 200 \nContent-Type: application/json\nTransfer-Encoding: chunked\nDate: Sat, 24 Oct 2026 09:00:11 GMT\n\n{\"id\":5,\"engineType\":\"PETROL\",\"volumeLiters\":null,\"horsepower\":110,\"torqueNm\":null,\"serialNumber\":\"DOC-DEMO-001\"}"
+    },
+    {
+      "name": "Отклонение отрицательной мощности",
+      "command_args": [
+        "curl",
+        "-sS",
+        "-i",
+        "--request",
+        "POST",
+        "http://127.0.0.1:64908/api/engines",
+        "--header",
+        "Content-Type: application/json",
+        "--data-binary",
+        "@-"
+      ],
+      "stdin": "{\n  \"engineType\": \"PETROL\",\n  \"horsepower\": -1,\n  \"serialNumber\": \"DOC-DEMO-INVALID\"\n}\n",
+      "status": 400,
+      "headers": "HTTP/1.1 400 \nContent-Type: application/problem+json\nTransfer-Encoding: chunked\nDate: Sat, 24 Oct 2026 09:00:11 GMT\nConnection: close",
+      "response": {
+        "type": "about:blank",
+        "title": "Bad Request",
+        "status": 400,
+        "detail": "Request validation failed.",
+        "instance": "/api/engines"
+      },
+      "raw_stdout": "HTTP/1.1 400 \nContent-Type: application/problem+json\nTransfer-Encoding: chunked\nDate: Sat, 24 Oct 2026 09:00:11 GMT\nConnection: close\n\n{\"type\":\"about:blank\",\"title\":\"Bad Request\",\"status\":400,\"detail\":\"Request validation failed.\",\"instance\":\"/api/engines\"}"
+    }
+  ]
+}
